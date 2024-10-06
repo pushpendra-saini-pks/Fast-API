@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from typing import Optional ,List
 
 app = FastAPI()
 
@@ -8,7 +9,7 @@ app = FastAPI()
 class Item(BaseModel):
     name : str
     price : float
-    is_offer : bool = None
+    is_offer : Optional[bool] = None
     
     
     
@@ -32,3 +33,5 @@ def read_item(item_id : int , q:str =None):
 @app.post("/")
 def create_item(item:Item):
     return {"item_name":item.name,"item_price" : item.price, "item_is_offer":item.is_offer}
+
+
