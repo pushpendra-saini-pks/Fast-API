@@ -1,0 +1,13 @@
+prefix=C:/Fast API/venv/Library
+exec_prefix=C:/Fast API/venv/Library
+libdir=C:/Fast API/venv/Library/lib
+sharedlibdir=C:/Fast API/venv/Library/lib
+includedir=C:/Fast API/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
